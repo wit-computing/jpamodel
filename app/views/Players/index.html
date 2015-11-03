@@ -1,16 +1,16 @@
 #{extends 'main.html' /}
 #{set title:'Players' /}
 
-<nav>
+<nav class="ui menu">
   <a class="item"         href="/divisions"> Divisions </a>
   <a class="item"         href="/clubs">     Clubs     </a>
   <a class="active item"  href="/players">   Players   </a>            
   <a class="item"         href="/sponsors">  Sponsors  </a>
 </nav>
 
-<section>        
+<section class="ui raised segment">        
  <h1>Players</h1>
-  <table>
+  <table class="ui table">
     <thead>
       <tr>
         <th> Player</th>
@@ -23,7 +23,7 @@
         <tr>
           <td>${player.name}</td>
           <td>${player.club.name}</td>
-          <td> <a href="/players/delete/${player.id}">Delete</a> </td>
+          <td> <a class="ui mini teal button" href="/players/delete/${player.id}">Delete</a> </td>
           <td></td>
         </tr>
       #{/list}
