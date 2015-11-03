@@ -3,7 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+# Home page
+GET     /                                       Divisions.index
+GET     /divisions                              Divisions.index
+GET     /clubs                                  Clubs.index
+GET     /players                                Players.index
+GET     /sponsors                               Sponsors.index
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

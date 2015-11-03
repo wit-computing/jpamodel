@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set title:'Sponsors'/}
+
+<nav>
+  <a class="item"         href="/divisions"> Divisions </a>
+  <a class="item"         href="/clubs">     Clubs     </a>
+  <a class="item"         href="/players">   Players   </a>            
+  <a class="active item"  href="/sponsors">  Sponsors  </a>
+</nav>
+
+<section>        
+ <h1>Sponsors</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Sponsor</th>
+        <th>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+	    #{list items:sponsors, as:'sponsor'}
+	      <tr>
+	        <td>${sponsor.name}</td>
+	        <td></td>
+	        <td></td>
+	      </tr>
+	    #{/list}
+    </tbody>
+  </table>
+</section>
+    
