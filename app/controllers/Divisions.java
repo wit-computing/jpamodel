@@ -13,4 +13,11 @@ public class Divisions extends Controller
 
     render (divisions);
   }
+  
+  public static void delete(Long id)
+  {
+    Division division = Division.findById(id);
+    division.delete();
+    index();
+  }
 }
