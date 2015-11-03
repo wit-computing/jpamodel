@@ -12,4 +12,9 @@ public class Club extends Model
   {
     this.name = name;
   }
+  
+  public static Club findByName(String name)
+  {
+    return find("name", name).first();
+  } 
 }

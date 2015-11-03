@@ -12,4 +12,9 @@ public class Player extends Model
   {
     this.name = name;
   }
+  
+  public static Player findByName(String name)
+  {
+    return find("name", name).first();
+  }
 }
