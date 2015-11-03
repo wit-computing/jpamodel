@@ -22,9 +22,13 @@
       #{list items:players, as:'player'}
         <tr>
           <td>${player.name}</td>
-          <td>${player.club.name}</td>
+         <td>  ${player.club?.name} </td>
           <td> <a class="ui mini teal button" href="/players/delete/${player.id}">Delete</a> </td>
-          <td></td>
+          <td>
+            <a class="ui blue button" href="/players/addplayer">
+   		      <i class="user icon"></i> Add Player
+            </a> 
+          </td>
         </tr>
       #{/list}
     </tbody>

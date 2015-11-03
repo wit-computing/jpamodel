@@ -27,4 +27,16 @@ public class Players extends Controller
     }
     index();
   }
+  
+  public static void addPlayer()
+  {
+    render();
+  }
+
+  public static void newPlayer(String name)
+  {
+    Player player = new Player (name);
+    player.save();
+    index();
+  }
 }

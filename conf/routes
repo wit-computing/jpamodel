@@ -13,6 +13,8 @@ GET    /players/delete/{id}                     Players.delete
 GET    /clubs/delete/{id}                       Clubs.delete
 GET    /divisions/delete/{id}                   Divisions.delete
 GET    /sponsors/delete/{id}                    Sponsors.delete
+GET    /players/addplayer                       Players.addPlayer
+POST   /players/newplayer                       Players.newPlayer
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
