@@ -14,17 +14,23 @@
     <thead>
       <tr>
         <th>Sponsor</th>
-        <th>
-        </th>
-        <th>
-        </th>
+        <th>Clubs</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
 	    #{list items:sponsors, as:'sponsor'}
 	      <tr>
 	        <td>${sponsor.name}</td>
-	        <td></td>
+          <td> 
+            <table class "ui table">
+              <tr>
+               #{list items:sponsor.support, as:'club'}
+                 <td>${club.name}</td> </tr>
+               #{/list}
+               </tr>
+             </table>            
+          </td>
 	        <td></td>
 	      </tr>
 	    #{/list}
