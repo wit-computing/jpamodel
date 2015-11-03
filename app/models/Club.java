@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import play.db.jpa.Model;
@@ -16,11 +17,15 @@ public class Club extends Model
   
   @OneToMany(mappedBy="club", cascade=CascadeType.ALL)
   public List<Player> players;
+  
+  @ManyToMany
+  public List<Sponsor> sponsors;
 
   public Club(String name)
   {
     this.name = name;
     this.players = new ArrayList<Player>();
+    this.sponsors = new ArrayList<Sponsor>();
   }
   
   public void addPlayer(Player player)
@@ -29,6 +34,11 @@ public class Club extends Model
     players.add(player);
   }
 
+  public void addSponsor(Sponsor company)
+  {
+    sponsors.add(company);  
+  }
+  
   public static Club findByName(String name)
   {
     return find("name", name).first();
