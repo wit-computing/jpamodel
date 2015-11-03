@@ -88,4 +88,13 @@ public class ClubTest extends UnitTest
 
     mike.delete();
   }
+  
+  @Test
+  public void testPlayerClub()
+  {
+    Player mike  = Player.findByName("mike");
+    assertNotNull (mike.club);
+    assertEquals ("tramore", mike.club.name);
+  }
+  
 }

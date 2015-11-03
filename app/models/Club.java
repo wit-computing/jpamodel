@@ -14,7 +14,7 @@ public class Club extends Model
 {
   public String name;
   
-  @OneToMany(cascade=CascadeType.ALL)
+  @OneToMany(mappedBy="club", cascade=CascadeType.ALL)
   public List<Player> players;
 
   public Club(String name)
@@ -25,6 +25,7 @@ public class Club extends Model
   
   public void addPlayer(Player player)
   {
+    player.club = this;
     players.add(player);
   }
 
