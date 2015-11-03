@@ -12,4 +12,19 @@ public class Players extends Controller
     List<Player> players = Player.findAll();
     render (players);
   }
+  
+  public static void delete(Long id)
+  {
+    Player player = Player.findById(id);
+    if (player != null)
+    {
+      if (player.club != null)
+      {
+        player.club.removePlayer(player);
+        player.club.save();
+      }
+      player.delete();
+    }
+    index();
+  }
 }

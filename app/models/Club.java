@@ -34,6 +34,11 @@ public class Club extends Model
     players.add(player);
   }
 
+  public void removePlayer(Player player)
+  {
+    players.remove(player);
+  }
+  
   public void addSponsor(Sponsor company)
   {
     sponsors.add(company);  
