@@ -9,7 +9,7 @@
 </nav>
 
 <section>        
- <h1>Divisions</h1>
+  <h1>Divisions</h1>
   <table>
     <thead>
       <tr>
@@ -24,7 +24,15 @@
       #{list items:divisions, as:'division'}
         <tr>
           <td>${division.name}</td>
-          <td></td>
+          <td>
+            <table class="table">
+              <tr>
+              #{list items:division.members, as:'club'}
+                <td>${club.name}</td> </tr>
+              #{/list}
+              </tr>
+            </table>
+          </td>
           <td></td>
         </tr>
       #{/list}

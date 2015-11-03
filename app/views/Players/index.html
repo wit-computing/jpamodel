@@ -13,21 +13,20 @@
   <table>
     <thead>
       <tr>
-        <th>Player</th>
-        <th>
-        </th>
-        <th>
-        </th>
+        <th> Player</th>
+        <th> Club </th>
+        <th> </th>
       </tr>
     </thead>
     <tbody>
       #{list items:players, as:'player'}
         <tr>
           <td>${player.name}</td>
-          <td></td>
+          <td>${player.club.name}</td>
           <td></td>
         </tr>
       #{/list}
     </tbody>
   </table>
 </section>
+

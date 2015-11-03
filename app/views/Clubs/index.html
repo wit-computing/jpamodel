@@ -9,22 +9,28 @@
 </nav>
 
 <section>        
- <h1>Clubs</h1>
+  <h1>Clubs</h1>
   <table>
     <thead>
       <tr>
         <th>Club</th>
-        <th>
-        </th>
-        <th>
-        </th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       #{list items:clubs, as:'club'}
         <tr>
           <td>${club.name}</td>
-          <td></td>
+          <td>
+             <table>
+               <tr>
+               #{list items:club.players, as:'player'}
+                 <td>${player.name}</td> </tr>
+               #{/list}
+               </tr>
+             </table>         
+          </td>
           <td></td>
         </tr>
       #{/list}
