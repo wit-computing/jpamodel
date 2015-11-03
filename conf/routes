@@ -10,6 +10,7 @@ GET     /clubs                                  Clubs.index
 GET     /players                                Players.index
 GET     /sponsors                               Sponsors.index
 GET    /players/delete/{id}                     Players.delete
+GET    /clubs/delete/{id}                       Clubs.delete
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
