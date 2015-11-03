@@ -1,0 +1,31 @@
+# Ignore all dotfiles...
+.*
+# except for .gitignore
+!.gitignore
+
+
+
+# Ignore Play! working directory #
+documentation
+war
+db
+eclipse
+lib
+log
+logs
+modules
+precompiled
+project/project
+project/target
+crud/*
+data/*
+conf/crud/*
+conf/cloudbees*
+public/crud/*
+target
+tmp
+test-result
+server.pid
+*.iml
+*.eml
+
